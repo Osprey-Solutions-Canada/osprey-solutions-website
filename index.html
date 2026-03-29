@@ -1242,14 +1242,6 @@
     // ========== MAIN INIT ==========
     gsap.registerPlugin(ScrollTrigger);
 
-    // Mobile menu — runs immediately, no GSAP dependency
-    const mt = document.getElementById('mobile-toggle');
-    const mm = document.getElementById('mobile-menu');
-    if (mt && mm) {
-      mt.addEventListener('click', () => mm.classList.toggle('hidden'));
-      mm.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mm.classList.add('hidden')));
-    }
-
     // Everything below needs GSAP — wait for it to load
     window.addEventListener('load', function() {
     // Mountain parallax
@@ -1311,6 +1303,25 @@
       });
     });
     }); // end window.addEventListener('load')
+  </script>
+
+  <!-- Mobile menu — standalone, no dependencies -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var toggle = document.getElementById('mobile-toggle');
+      var menu = document.getElementById('mobile-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', function() {
+          menu.classList.toggle('hidden');
+        });
+        var links = menu.querySelectorAll('a');
+        for (var i = 0; i < links.length; i++) {
+          links[i].addEventListener('click', function() {
+            menu.classList.add('hidden');
+          });
+        }
+      }
+    });
   </script>
 
 </body>
