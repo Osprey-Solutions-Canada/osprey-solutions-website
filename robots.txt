@@ -1,0 +1,27 @@
+# Osprey Solutions — robots.txt
+# Allow all crawlers including AI search engines
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://osprey.solutions/sitemap.xml
+
+# Explicitly allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

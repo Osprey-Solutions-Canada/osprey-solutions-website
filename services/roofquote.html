@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoofQuote — Instant Roof Estimates | Osprey</title>
+  <meta name="description" content="RoofQuote gives homeowners instant roof measurement and pricing estimates from satellite imagery. Embed on your website and turn visitors into leads with real numbers.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://osprey.solutions/services/roofquote">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Exo+2:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{navy:{900:'#0a0f1e',800:'#111827',700:'#1a2332',600:'#243044'},accent:{DEFAULT:'#e8781f',light:'#f59542',dark:'#c95f10'},cta:{DEFAULT:'#e8781f',hover:'#c95f10'},muted:'#94a3b8'},fontFamily:{heading:['Michroma','sans-serif'],subheading:['"Exo 2"','sans-serif'],body:['Inter','sans-serif']}}}}</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"RoofQuote","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"59","priceCurrency":"USD","description":"Monthly subscription after 14-day free trial"},"provider":{"@type":"ProfessionalService","name":"Osprey Solutions","url":"https://osprey.solutions"},"description":"SaaS platform that provides instant roof measurement and pricing estimates from satellite imagery for roofing contractors."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How does RoofQuote measure roofs?","acceptedAnswer":{"@type":"Answer","text":"RoofQuote uses satellite imagery and building footprint data from OpenStreetMap and Microsoft to calculate roof area. Homeowners enter their address, see their roof on a map, and get an instant square footage measurement and pricing estimate based on your configured rates."}},
+    {"@type":"Question","name":"How much does RoofQuote cost?","acceptedAnswer":{"@type":"Answer","text":"RoofQuote starts with a free 14-day trial. After that, it's $59/month or $1,500 for a lifetime license. Includes your custom pricing, branding, lead notifications, and CRM integration."}},
+    {"@type":"Question","name":"How accurate are the measurements?","acceptedAnswer":{"@type":"Answer","text":"RoofQuote measurements are typically within 5-10% of manual measurements, using the same satellite data sources as other industry tools. It's designed for quick estimates that capture leads — not replace a final on-site measurement."}},
+    {"@type":"Question","name":"Can I embed RoofQuote on my website?","acceptedAnswer":{"@type":"Answer","text":"Yes. RoofQuote is designed to embed on your website as an interactive tool. When a homeowner gets their estimate, they submit their contact info to receive a detailed PDF report — and that lead goes directly to your CRM or inbox."}},
+    {"@type":"Question","name":"What information do I get from each lead?","acceptedAnswer":{"@type":"Answer","text":"Every lead includes: homeowner name, email, phone number, property address, roof square footage, estimated price range, material preferences, and a branded PDF report. Leads are sent via SMS and email notification in real-time."}},
+    {"@type":"Question","name":"Does RoofQuote work for metal roofing and flat roofing as well as asphalt shingles?","acceptedAnswer":{"@type":"Answer","text":"Yes. You configure your own pricing rates for each material type — asphalt shingles, metal roofing, cedar shake, flat/TPO, and any custom material you offer. Homeowners select their preferred material and see a price estimate based on your actual rates for that specific material."}},
+    {"@type":"Question","name":"Can RoofQuote measure multi-story homes or complex roof shapes?","acceptedAnswer":{"@type":"Answer","text":"RoofQuote calculates roof area from the building footprint, which works well for standard residential roofs. Complex shapes and multi-pitch roofs are measured as overall footprint area. Estimates come with a note that a final measurement will be done on-site, which sets proper expectations and still generates the lead effectively."}},
+    {"@type":"Question","name":"How does RoofQuote compare to EagleView or GAF QuickMeasure?","acceptedAnswer":{"@type":"Answer","text":"EagleView and GAF QuickMeasure are tools contractors use internally to generate accurate measurements. RoofQuote is a customer-facing lead generation tool that sits on your website and converts visitors into leads by giving homeowners instant estimates. They solve different problems — RoofQuote runs 24/7 on your website generating leads while you sleep."}}
+  ]}</script>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}body{background:#0a0f1e;color:#f1f5f9;font-family:'Inter',sans-serif;overflow-x:hidden}h1,h2{font-family:'Michroma',sans-serif;letter-spacing:.02em}h3,h4{font-family:'Exo 2',sans-serif;letter-spacing:.01em}.gradient-text{background:linear-gradient(135deg,#e8781f,#f59542,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.glass-card{background:rgba(17,24,39,.6);backdrop-filter:blur(12px);border:1px solid rgba(232,120,31,.15);transition:all .3s ease}.glass-card:hover{border-color:rgba(232,120,31,.4);transform:translateY(-4px);box-shadow:0 8px 32px rgba(232,120,31,.15)}.cta-btn{background:linear-gradient(135deg,#e8781f,#c95f10);transition:all .3s ease}.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,120,31,.4)}.cta-secondary{border:2px solid #e8781f;color:#e8781f;transition:all .3s ease}.cta-secondary:hover{background:#e8781f;color:#fff}.nav-blur{backdrop-filter:blur(16px);background:rgba(10,15,30,.85);border-bottom:1px solid rgba(232,120,31,.1)}.glow-line{height:2px;background:linear-gradient(90deg,transparent,#e8781f,transparent);opacity:.5}.reveal{opacity:0;transform:translateY(40px)}.bg-grid{background-image:linear-gradient(rgba(232,120,31,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(232,120,31,.02) 1px,transparent 1px);background-size:60px 60px}.orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}.float-call{position:fixed;bottom:24px;right:24px;z-index:50;width:60px;height:60px;background:linear-gradient(135deg,#e8781f,#c95f10);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(232,120,31,.5);animation:pulse-ring 2s ease infinite}@keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(232,120,31,.5)}70%{box-shadow:0 0 0 15px rgba(232,120,31,0)}100%{box-shadow:0 0 0 0 rgba(232,120,31,0)}}details summary{cursor:pointer;list-style:none}details summary::-webkit-details-marker{display:none}details[open] summary .faq-arrow{transform:rotate(180deg)}.faq-arrow{transition:transform .3s ease}
+      /* ---- SVG MOUNTAIN PARALLAX HERO ---- */
+    .mountain-bg { position:absolute; bottom:0; left:0; right:0; width:100%; pointer-events:none; }
+    .mountain-layer-1 { z-index:1; }
+    .mountain-layer-2 { z-index:2; }
+    .mountain-layer-3 { z-index:3; }
+    .tree-sway { transform-origin:bottom center; animation:treeSway 4s ease-in-out infinite alternate; }
+    .tree-sway-slow { transform-origin:bottom center; animation:treeSway 6s ease-in-out infinite alternate; animation-delay:-2s; }
+    @keyframes treeSway { 0%{transform:rotate(-0.7deg)} 100%{transform:rotate(0.7deg)} }
+    .card-glare { position:absolute; top:0; left:0; width:100%; height:100%; border-radius:inherit; pointer-events:none; background:radial-gradient(circle at 50% 50%,rgba(255,255,255,0.06),transparent 60%); opacity:0; transition:opacity .3s ease; z-index:5; }
+    .glass-card:hover .card-glare { opacity:1; }
+    .glass-card { transform-style:preserve-3d; perspective:1000px; }
+    @media (max-width:768px) { .mountain-bg{display:none!important} .reveal{opacity:1!important;transform:none!important} }
+    @media (prefers-reduced-motion:reduce) { .tree-sway,.tree-sway-slow{animation:none!important} .reveal{opacity:1!important;transform:none!important} }
+  </style>
+</head>
+<body class="bg-grid">
+
+  <nav class="fixed top-0 left-0 right-0 z-50 nav-blur"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex items-center justify-between h-16 lg:h-20"><a href="/osprey/" class="flex items-center"><img src="../osprey-logo.webp" alt="Osprey Solutions" class="h-10 lg:h-12 w-auto"></a><div class="hidden lg:flex items-center gap-8"><a href="/osprey/#services" class="text-muted hover:text-white transition-colors text-sm font-medium">Services</a><a href="/osprey/#industries" class="text-muted hover:text-white transition-colors text-sm font-medium">Industries</a><a href="tel:+17789100756" class="text-white font-semibold flex items-center gap-2"><svg class="w-4 h-4 text-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(778) 910-0756</a><a href="https://calendar.osprey.solutions" target="_blank" class="cta-btn text-navy-900 font-semibold px-6 py-2.5 rounded-lg text-sm">Start Free Trial</a></div><a href="tel:+17789100756" class="lg:hidden text-cta font-bold">(778) 910-0756</a></div></div></nav>
+
+  <!-- HERO -->
+  <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden" style="background:linear-gradient(180deg,#0a0f1e 0%,#0f1525 40%,#1a1520 65%,#2a1a12 85%,#3d2210 100%)">
+    <!-- Mountain silhouettes (desktop) -->
+    <div class="mountain-bg mountain-layer-1" style="bottom:8%;z-index:1;"><svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,200 L0,130 L80,110 L160,80 L220,100 L300,50 L380,75 L440,40 L520,70 L580,35 L660,60 L720,30 L800,55 L860,25 L940,50 L1000,35 L1080,65 L1140,30 L1220,55 L1300,40 L1380,70 L1440,45 L1440,200Z" fill="#0c1220"/></svg></div>
+    <div class="mountain-bg mountain-layer-2" style="bottom:3%;z-index:2;"><svg viewBox="0 0 1440 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,160 L0,100 L100,80 L180,55 L260,75 L340,40 L420,65 L500,45 L580,70 L660,50 L720,75 L800,55 L880,40 L960,60 L1040,35 L1120,55 L1200,45 L1280,65 L1360,50 L1440,70 L1440,160Z" fill="#111a28"/></svg></div>
+    <div class="mountain-bg mountain-layer-3" style="bottom:0;z-index:3;"><svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,100 L0,70 L60,60 L120,50 L200,65 L280,55 L360,45 L440,60 L520,50 L600,60 L680,70 L760,60 L840,50 L920,55 L1000,45 L1080,55 L1160,50 L1240,60 L1320,55 L1440,65 L1440,100Z" fill="#0d1520"/><g class="tree-sway"><polygon points="60,52 68,20 76,52" fill="#0c1620"/></g><g class="tree-sway-slow"><polygon points="160,48 170,12 180,48" fill="#0b1520"/></g><g class="tree-sway"><polygon points="320,50 328,18 336,50" fill="#0c1620"/></g><g class="tree-sway-slow"><polygon points="1100,48 1110,15 1120,48" fill="#0c1620"/></g><g class="tree-sway"><polygon points="1300,50 1308,20 1316,50" fill="#0b1520"/></g></svg></div>
+    <div class="hidden lg:block absolute bottom-0 left-0 right-0 h-32 z-[2]" style="background:radial-gradient(ellipse 80% 100% at 50% 100%,rgba(232,120,31,0.1) 0%,transparent 70%)"></div>
+    <div class="orb w-96 h-96 bg-amber-500 top-10 -right-48 opacity-[0.08]"></div>
+    <!-- Animated Roof Measurement Widget (desktop) -->
+    <div class="relative mx-auto mt-8 lg:absolute lg:right-[5%] lg:top-1/2 lg:-translate-y-1/2 z-[3]" style="perspective:1000px;">
+      <div style="transform:rotateY(-5deg) rotateX(2deg);">
+        <div class="relative w-[280px] h-[240px] lg:w-[320px] lg:h-[280px] rounded-2xl overflow-hidden" style="background:#0d1822;border:1px solid rgba(232,120,31,0.2);">
+          <!-- Satellite-style grid -->
+          <div class="absolute inset-0" style="background:linear-gradient(rgba(232,120,31,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(232,120,31,0.03) 1px,transparent 1px);background-size:20px 20px;"></div>
+          <!-- House outline draws itself -->
+          <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 280">
+            <!-- Roof shape — draws in -->
+            <path d="M80,160 L160,80 L240,160" fill="none" stroke="#e8781f" stroke-width="2.5" stroke-dasharray="300" stroke-dashoffset="300" style="animation:drawLine 2s ease-out 0.5s forwards"/>
+            <!-- House walls -->
+            <path d="M90,160 L90,220 L230,220 L230,160" fill="none" stroke="#e8781f" stroke-width="2" stroke-dasharray="250" stroke-dashoffset="250" style="animation:drawLine 1.5s ease-out 1.5s forwards" opacity="0.6"/>
+            <!-- Measurement lines -->
+            <line x1="75" y1="85" x2="75" y2="155" stroke="#34A853" stroke-width="1.5" stroke-dasharray="80" stroke-dashoffset="80" style="animation:drawLine 1s ease-out 2.5s forwards"/>
+            <line x1="85" y1="165" x2="235" y2="165" stroke="#34A853" stroke-width="1.5" stroke-dasharray="160" stroke-dashoffset="160" style="animation:drawLine 1s ease-out 2.8s forwards"/>
+            <!-- Measurement labels -->
+            <text x="60" y="125" fill="#34A853" font-size="11" font-family="monospace" opacity="0" style="animation:fadeIn 0.5s ease-out 3.2s forwards">24'</text>
+            <text x="145" y="180" fill="#34A853" font-size="11" font-family="monospace" opacity="0" style="animation:fadeIn 0.5s ease-out 3.5s forwards">42'</text>
+          </svg>
+          <!-- Sqft result -->
+          <div class="absolute bottom-3 right-3 bg-accent/20 border border-accent/30 rounded-lg px-3 py-2 text-right" style="animation:fadeIn 0.8s ease-out 3.8s both;">
+            <div class="text-xs text-muted">Est. Area</div>
+            <div class="font-heading text-xl font-bold text-accent" id="roof-sqft">0</div>
+            <div class="text-xs text-muted">sq ft</div>
+          </div>
+          <!-- Price result -->
+          <div class="absolute bottom-3 left-3 bg-green-500/10 border border-green-500/20 rounded-lg px-3 py-2" style="animation:fadeIn 0.8s ease-out 4.3s both;">
+            <div class="text-xs text-muted">Estimate</div>
+            <div class="font-heading text-xl font-bold text-green-400" id="roof-price">$0</div>
+          </div>
+          <!-- Status -->
+          <div class="absolute top-3 left-3 flex items-center gap-2" style="animation:fadeIn 0.5s ease-out 0.3s both;">
+            <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+            <span class="text-xs text-muted font-mono">MEASURING...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      @keyframes drawLine{to{stroke-dashoffset:0}}
+      @keyframes fadeIn{to{opacity:1}}
+    </style>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl lg:max-w-xl">
+        <div class="flex items-center gap-2 mb-4">
+          <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          <span class="text-accent font-subheading font-semibold text-sm tracking-wider uppercase">RoofQuote • SaaS Platform</span>
+        </div>
+        <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+          Turn Website Visitors Into Roofing Leads With <span class="gradient-text">Instant Estimates</span>
+        </h1>
+        <p class="text-muted text-lg mb-8 max-w-2xl">
+          Homeowners enter their address, see their roof on satellite, and get an instant price estimate based on your rates. They submit their info to get a detailed PDF — and you get a qualified lead. No "request a quote" forms.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+          <a href="https://calendar.osprey.solutions" target="_blank" class="cta-btn text-navy-900 font-bold px-8 py-4 rounded-xl text-lg text-center">Start 14-Day Free Trial →</a>
+          <a href="tel:+17789100756" class="cta-secondary px-8 py-4 rounded-xl text-lg font-semibold text-center">(778) 910-0756</a>
+        </div>
+        <div class="flex flex-wrap gap-6 text-sm text-muted">
+          <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>7 roofers onboarded</span>
+          <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>14-day free trial</span>
+          <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>$59/mo after trial</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- PROBLEM -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6">"Request a Quote" Forms <span class="gradient-text">Don't Convert</span></h2>
+      <p class="reveal text-muted text-lg text-center max-w-2xl mx-auto mb-16">Homeowners want numbers, not promises. Give them an estimate and they'll give you their contact info.</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/10 flex items-center justify-center mb-4"><svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
+          <h3 class="font-bold text-lg mb-2">Generic Forms = Low Conversion</h3>
+          <p class="text-muted">"Fill out this form and we'll get back to you" — that's what every roofer says. Homeowners want to know the price NOW.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500/20 to-amber-600/10 flex items-center justify-center mb-4"><svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <h3 class="font-bold text-lg mb-2">Slow Response = Lost Lead</h3>
+          <p class="text-muted">The first roofer to give a number wins. If it takes you 24 hours to follow up, they've already talked to 3 competitors.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500/20 to-green-600/10 flex items-center justify-center mb-4"><svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+          <h3 class="font-bold text-lg mb-2">Pre-Qualified = Better Leads</h3>
+          <p class="text-muted">When a homeowner sees their roof measurement and price before submitting, they already know what to expect. Higher close rate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- WHY IT MATTERS -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="reveal font-heading text-2xl sm:text-3xl lg:text-4xl font-bold mb-8">Why Instant Estimates <span class="gradient-text">Win More Roofing Jobs</span></h2>
+        <p class="reveal text-muted text-lg mb-6 leading-relaxed">The average homeowner contacts <span class="gradient-text font-bold">3.5 roofing contractors</span> before making a decision. Whoever gives real numbers first has a decisive advantage. Traditional "request a quote" forms convert at <span class="text-accent font-semibold">1-3%</span> of website visitors. Interactive online estimating tools convert at <span class="text-accent font-semibold">8-12%</span>. That difference — getting 3x to 8x more leads from the same web traffic — is what separates roofers who are always busy from ones constantly hunting for their next job.</p>
+        <p class="reveal text-muted text-lg mb-6 leading-relaxed">Speed matters more than price in roofing. A Harvard study found that <span class="text-accent font-semibold">78% of buyers go with the vendor who responds first</span>. When a homeowner sees storm damage on a Friday evening and visits your site, the competitor with an instant estimating tool captures that lead while you're sleeping. You follow up Monday morning — they've already signed with someone else. The roofing market runs on urgency.</p>
+        <p class="reveal text-muted text-lg leading-relaxed">There's also a lead quality advantage. A homeowner who has already seen their roof measured and a price estimate is dramatically more serious than someone who clicked "contact us" impulsively. They've invested time in the process. They know what to expect. Your close rate on <span class="gradient-text font-bold">pre-qualified RoofQuote leads</span> will be significantly higher than on cold contact form submissions — which means less time chasing tire-kickers and more time booking real jobs.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-4">How RoofQuote <span class="gradient-text">Works</span></h2>
+      <p class="reveal text-muted text-center mb-16 max-w-2xl mx-auto">From the homeowner's perspective — what they see on your website.</p>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="text-center reveal">
+          <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-accent-dark mx-auto mb-4 flex items-center justify-center"><span class="font-heading text-2xl font-bold">1</span></div>
+          <h3 class="font-bold mb-2">Enter Address</h3>
+          <p class="text-muted text-sm">Homeowner types their address into the search bar on your website.</p>
+        </div>
+        <div class="text-center reveal">
+          <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-accent-dark mx-auto mb-4 flex items-center justify-center"><span class="font-heading text-2xl font-bold">2</span></div>
+          <h3 class="font-bold mb-2">See Their Roof</h3>
+          <p class="text-muted text-sm">Satellite view loads with their building highlighted. Roof area calculated from building footprint data.</p>
+        </div>
+        <div class="text-center reveal">
+          <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-accent-dark mx-auto mb-4 flex items-center justify-center"><span class="font-heading text-2xl font-bold">3</span></div>
+          <h3 class="font-bold mb-2">Get Estimate</h3>
+          <p class="text-muted text-sm">Instant pricing based on your configured rates per material type. Real numbers, not "we'll get back to you."</p>
+        </div>
+        <div class="text-center reveal">
+          <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-accent-dark mx-auto mb-4 flex items-center justify-center"><span class="font-heading text-2xl font-bold">4</span></div>
+          <h3 class="font-bold mb-2">You Get the Lead</h3>
+          <p class="text-muted text-sm">They submit name, email, phone to get a branded PDF report. You get SMS + email notification instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- FEATURES -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-16">What's <span class="gradient-text">Included</span></h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold mb-2 flex items-center gap-2"><span class="text-accent">✦</span> Satellite Roof Measurements</h3><p class="text-muted text-sm">92 million buildings in our database. Address lookup → instant square footage from building footprint data.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold mb-2 flex items-center gap-2"><span class="text-accent">✦</span> Custom Pricing Per Material</h3><p class="text-muted text-sm">Configure your rates for asphalt, metal, cedar, flat roofing — homeowners see your real pricing, not generic estimates.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold mb-2 flex items-center gap-2"><span class="text-accent">✦</span> Branded PDF Reports</h3><p class="text-muted text-sm">Professional multi-page estimate with your logo, colors, contact info, and roof measurements. Emailed to the homeowner.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold mb-2 flex items-center gap-2"><span class="text-accent">✦</span> SMS + Email Lead Notifications</h3><p class="text-muted text-sm">Get a text and email the instant a lead submits. Name, phone, address, square footage, material preference.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold mb-2 flex items-center gap-2"><span class="text-accent">✦</span> CRM Integration</h3><p class="text-muted text-sm">Leads auto-create contacts in GoHighLevel or Jobber. No manual entry needed.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold mb-2 flex items-center gap-2"><span class="text-accent">✦</span> Website Embed</h3><p class="text-muted text-sm">Drop the RoofQuote widget on any page of your website. Works on any platform — WordPress, Squarespace, custom HTML.</p></div>
+      </div>
+      <div class="text-center mt-12 reveal">
+        <a href="https://calendar.osprey.solutions" target="_blank" class="cta-btn inline-block text-navy-900 font-bold px-10 py-4 rounded-xl text-lg">Start Your Free Trial →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- WHAT MAKES US DIFFERENT -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-4">RoofQuote vs. <span class="gradient-text">The Alternatives</span></h2>
+      <p class="reveal text-muted text-center mb-16 max-w-2xl mx-auto">Every roofing tool claims to generate leads. Here's how RoofQuote actually stacks up.</p>
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <h3 class="font-bold text-lg mb-6 text-muted">Other Lead Gen Tools</h3>
+          <ul class="space-y-4 text-muted text-sm">
+            <li class="flex items-start gap-3"><span class="text-red-400 mt-0.5 flex-shrink-0">✗</span> <strong class="text-slate-300">HomeAdvisor / Angi:</strong> Shared leads sold to 3-5 contractors simultaneously</li>
+            <li class="flex items-start gap-3"><span class="text-red-400 mt-0.5 flex-shrink-0">✗</span> <strong class="text-slate-300">Generic quote forms:</strong> 1-3% conversion rate, unqualified, non-exclusive</li>
+            <li class="flex items-start gap-3"><span class="text-red-400 mt-0.5 flex-shrink-0">✗</span> <strong class="text-slate-300">Pay-per-lead platforms:</strong> $30-150 per lead, no control over lead quality</li>
+            <li class="flex items-start gap-3"><span class="text-red-400 mt-0.5 flex-shrink-0">✗</span> No brand building — leads associate with the platform, not your company</li>
+          </ul>
+        </div>
+        <div class="glass-card rounded-2xl p-8 reveal" style="border-color: rgba(232,120,31,0.35);">
+          <h3 class="font-bold text-lg mb-6 gradient-text">RoofQuote</h3>
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-start gap-3"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span> 100% exclusive leads — every submission goes only to you</li>
+            <li class="flex items-start gap-3"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span> 8-12% conversion rate — leads are already pre-qualified with real numbers</li>
+            <li class="flex items-start gap-3"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span> $59/month flat — unlimited leads with no per-lead fees</li>
+            <li class="flex items-start gap-3"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span> Branded with your company — homeowners associate the experience with you</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- PRICING -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl font-bold text-center mb-12">Simple <span class="gradient-text">Pricing</span></h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="glass-card rounded-2xl p-8 text-center reveal">
+          <div class="text-accent font-subheading font-bold text-sm tracking-wider uppercase mb-4">Monthly</div>
+          <div class="font-heading text-5xl font-bold mb-2">$59<span class="text-muted text-lg">/mo</span></div>
+          <p class="text-muted text-sm mb-6">14-day free trial. Cancel anytime.</p>
+          <ul class="text-left space-y-3 text-sm text-muted mb-8">
+            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Unlimited roof lookups</li>
+            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Custom pricing + branding</li>
+            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>PDF reports + lead notifications</li>
+            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>CRM integration</li>
+          </ul>
+          <a href="https://calendar.osprey.solutions" target="_blank" class="cta-btn inline-block w-full text-navy-900 font-bold py-3 rounded-xl">Start Free Trial</a>
+        </div>
+        <div class="glass-card rounded-2xl p-8 text-center reveal" style="border-color: rgba(232,120,31,0.4);">
+          <div class="text-accent font-subheading font-bold text-sm tracking-wider uppercase mb-4">Lifetime</div>
+          <div class="font-heading text-5xl font-bold mb-2">$1,500</div>
+          <p class="text-muted text-sm mb-6">One-time payment. Yours forever.</p>
+          <ul class="text-left space-y-3 text-sm text-muted mb-8">
+            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Everything in Monthly</li>
+            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Never pay again</li>
+            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Priority support</li>
+            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Early access to new features</li>
+          </ul>
+          <a href="https://calendar.osprey.solutions" target="_blank" class="cta-btn inline-block w-full text-navy-900 font-bold py-3 rounded-xl">Get Lifetime Access</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="reveal font-heading text-2xl sm:text-3xl font-bold text-center mb-4">Who RoofQuote Is <span class="gradient-text">Built For</span></h2>
+        <p class="reveal text-muted text-center mb-12">RoofQuote is purpose-built for roofing contractors who are tired of low-quality leads and low-converting websites.</p>
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3"><span class="text-accent text-xl flex-shrink-0">✓</span><div><span class="font-bold">Residential roofing contractors</span> — your bread and butter is homeowners. RoofQuote gives them what they want (a number) and gives you what you need (their contact info).</div></li>
+            <li class="flex items-start gap-3"><span class="text-accent text-xl flex-shrink-0">✓</span><div><span class="font-bold">Roofers running Google Ads</span> — you're paying per click. RoofQuote turns more of those clicks into actual leads instead of bounces from a generic contact form.</div></li>
+            <li class="flex items-start gap-3"><span class="text-accent text-xl flex-shrink-0">✓</span><div><span class="font-bold">New roofing companies</span> — building credibility fast means providing the kind of instant online service that larger competitors don't. RoofQuote levels the playing field.</div></li>
+            <li class="flex items-start gap-3"><span class="text-accent text-xl flex-shrink-0">✓</span><div><span class="font-bold">Roofers frustrated with HomeAdvisor / Angi</span> — if you're paying for shared leads, RoofQuote generates exclusive leads at a fraction of the cost.</div></li>
+            <li class="flex items-start gap-3"><span class="text-accent text-xl flex-shrink-0">✓</span><div><span class="font-bold">Multi-crew roofing operations</span> — you need consistent lead volume to keep crews busy. RoofQuote runs 24/7 generating qualified leads even while your team is mid-job.</div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- FAQ -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl font-bold text-center mb-12">Frequently Asked <span class="gradient-text">Questions</span></h2>
+      <div class="space-y-4">
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">How does RoofQuote measure roofs?</h3><p class="text-muted leading-relaxed">RoofQuote uses satellite imagery and building footprint data from OpenStreetMap and Microsoft to calculate roof area. Homeowners enter their address, see their roof on a map, and get an instant square footage measurement and pricing estimate.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">How accurate are the measurements?</h3><p class="text-muted leading-relaxed">Typically within 5-10% of manual measurements. It's designed for quick estimates that capture leads — not replace a final on-site measurement. The goal is to give homeowners a real number fast.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">Can I embed it on my website?</h3><p class="text-muted leading-relaxed">Yes. RoofQuote is designed to embed on any website — WordPress, Squarespace, Wix, or custom HTML. We provide the embed code and help you set it up.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">What information do I get from each lead?</h3><p class="text-muted leading-relaxed">Name, email, phone number, property address, roof square footage, estimated price range, material preferences, and a branded PDF report. Leads are sent via SMS and email in real-time.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">Does RoofQuote work for metal roofing and flat roofing too?</h3><p class="text-muted leading-relaxed">Yes. You configure your own pricing rates for each material type — asphalt shingles, metal roofing, cedar shake, flat/TPO, and any custom material you offer. Homeowners select their preferred material and see a price estimate based on your actual rates for that specific material.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">Can RoofQuote measure multi-story homes or complex roof shapes?</h3><p class="text-muted leading-relaxed">RoofQuote calculates roof area from the building footprint, which works well for standard residential roofs. For complex shapes, estimates come with a note that a final measurement will be done on-site — which sets proper expectations and still generates the lead effectively.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">How does RoofQuote compare to EagleView or GAF QuickMeasure?</h3><p class="text-muted leading-relaxed">EagleView and GAF QuickMeasure are tools contractors use internally for accurate measurements. RoofQuote is a customer-facing lead generation tool that converts website visitors into qualified leads. They solve different problems — RoofQuote runs 24/7 on your website capturing homeowners who are already looking for a roofer.</p></div>
+      </div>
+    </div>
+  </section>
+
+    <!-- SOCIAL PROOF -->
+  <section class="py-16 lg:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass-card rounded-2xl p-8 text-center reveal">
+        <div class="text-cta text-lg mb-4">★★★★★</div>
+        <p class="text-muted text-lg leading-relaxed mb-6 italic">"RoofQuote changed how we handle estimates. Homeowners get real numbers instantly — and by the time they call us, they're already sold. We've cut our quote time in half and our close rate went up 30%."</p>
+        <div class="font-semibold text-white">— Roofing contractor, BC</div>
+      </div>
+    </div>
+  </section>
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- FINAL CTA -->
+  <section class="py-20 lg:py-28 relative overflow-hidden">
+    <div class="orb w-96 h-96 bg-accent left-1/2 -translate-x-1/2 top-0 opacity-[0.06]"></div>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">Stop Losing Leads to <span class="gradient-text">"Request a Quote"</span></h2>
+      <p class="reveal text-muted text-lg mb-8">Give homeowners what they actually want — real numbers, instantly. Start your free trial today.</p>
+      <div class="reveal"><a href="https://calendar.osprey.solutions" target="_blank" class="cta-btn inline-block text-navy-900 font-bold px-10 py-5 rounded-xl text-xl">Start 14-Day Free Trial →</a></div>
+    </div>
+  </section>
+
+  <footer class="border-t border-navy-700 py-12"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex flex-col md:flex-row items-center justify-between gap-6"><a href="/osprey/"><img src="../osprey-logo.webp" alt="Osprey Solutions" class="h-8 w-auto"></a><div class="flex flex-wrap gap-6 text-sm text-muted"><a href="/osprey/services/google-business-management.html" class="hover:text-white transition-colors">GBP</a><a href="/osprey/services/google-ads.html" class="hover:text-white transition-colors">Google Ads</a><a href="/osprey/services/ai-voice-agents.html" class="hover:text-white transition-colors">Voice AI</a><a href="/osprey/services/roofquote.html" class="text-white">RoofQuote</a><a href="/osprey/services/website-design.html" class="hover:text-white transition-colors">Websites</a><a href="/osprey/services/seo-content.html" class="hover:text-white transition-colors">SEO</a></div><p class="text-muted text-sm">&copy; 2026 Osprey Solutions</p></div></div></footer>
+  <a href="tel:+17789100756" class="float-call lg:hidden" aria-label="Call"><svg class="w-7 h-7 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></a>
+  <script>
+    var ro=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){gsap.to(e.target,{opacity:1,y:0,scale:1,duration:.7,ease:'power2.out'});ro.unobserve(e.target)}})},{threshold:.05,rootMargin:'0px 0px 50px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el)});
+    // Animated sqft + price counter
+    (function(){
+      var sqft=document.getElementById('roof-sqft');
+      var price=document.getElementById('roof-price');
+      if(!sqft) return;
+      setTimeout(function(){
+        gsap.to({v:0},{v:1955,duration:1.5,ease:'power1.out',delay:0,
+          onUpdate:function(){sqft.textContent=Math.round(this.targets()[0].v).toLocaleString()}});
+        gsap.to({v:0},{v:8750,duration:1.8,ease:'power1.out',delay:0.3,
+          onUpdate:function(){price.textContent='$'+Math.round(this.targets()[0].v).toLocaleString()}});
+      },3800);
+    })();
+  </script>
+</body>
+</html>

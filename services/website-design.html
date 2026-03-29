@@ -1,0 +1,498 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Design — Conversion-Focused Sites | Osprey</title>
+  <meta name="description" content="Custom, conversion-focused websites that actually generate leads. Dark themes, scroll animations, mobile-first, and built to rank. No templates. PageSpeed 90+ guaranteed.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://osprey.solutions/services/website-design">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Exo+2:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{navy:{900:'#0a0f1e',800:'#111827',700:'#1a2332',600:'#243044'},accent:{DEFAULT:'#e8781f',light:'#f59542',dark:'#c95f10'},cta:{DEFAULT:'#e8781f',hover:'#c95f10'},muted:'#94a3b8'},fontFamily:{heading:['Michroma','sans-serif'],subheading:['"Exo 2"','sans-serif'],body:['Inter','sans-serif']}}}}</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Website Design & Development","provider":{"@type":"ProfessionalService","name":"Osprey Solutions","url":"https://osprey.solutions","telephone":"+17789100756"},"description":"Custom, conversion-focused website design for local businesses. Dark themes, scroll animations, SEO built in, PageSpeed 90+ guaranteed. No templates.","areaServed":"North America","serviceType":"Web Design"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How much does a custom website cost?","acceptedAnswer":{"@type":"Answer","text":"Our websites range from $3,000-$10,000 depending on complexity. A standard conversion-focused business site is $3,000-5,000. Premium 3D interactive sites are $5,000-10,000. All include SEO, mobile optimization, and hosting setup."}},
+    {"@type":"Question","name":"How long does it take to build a website?","acceptedAnswer":{"@type":"Answer","text":"Most standard sites are completed in 2-4 weeks. Premium 3D sites take 4-6 weeks. We can have a working demo live in 24-48 hours for review — we build fast."}},
+    {"@type":"Question","name":"Do you use templates?","acceptedAnswer":{"@type":"Answer","text":"No. Every site is custom built from scratch using modern frameworks (React, Tailwind CSS, GSAP). We don't reskin WordPress themes. Your site will be unique, fast, and built specifically for your business."}},
+    {"@type":"Question","name":"Will my website be optimized for mobile?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every site is built mobile-first. Over 60% of your visitors will be on phones — floating call buttons, touch-friendly navigation, fast load times, and responsive layouts are standard."}},
+    {"@type":"Question","name":"Do you include SEO?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every website includes SEO foundation: Schema.org markup, optimized title tags, clean URLs, internal linking, image optimization, XML sitemap, and local SEO setup. We don't build websites that can't be found."}},
+    {"@type":"Question","name":"What is a PageSpeed score and why does it matter?","acceptedAnswer":{"@type":"Answer","text":"Google PageSpeed Insights scores your website 0-100 on loading performance, specifically on mobile devices. Scores below 50 hurt your search rankings and drive visitors away. Scores 90+ signal to Google that your site provides a good experience. We guarantee 90+ on every build — most template sites score 30-55 on mobile."}},
+    {"@type":"Question","name":"Do you build websites on WordPress?","acceptedAnswer":{"@type":"Answer","text":"No. We build custom HTML, CSS, and JavaScript sites using Tailwind CSS and GSAP animations. We avoid WordPress because plugin bloat kills PageSpeed scores, security vulnerabilities require constant updates, and template themes look identical to competitors. Custom builds are faster, more secure, and fully unique."}},
+    {"@type":"Question","name":"Can you redesign my existing website instead of building from scratch?","acceptedAnswer":{"@type":"Answer","text":"Yes. If your current site has good content and structure, we can redesign and rebuild it with improved performance, conversion optimization, and updated design. We'll audit your existing site first, identify what's working, and build a better version that retains your SEO equity while improving everything else."}}
+  ]}</script>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}body{background:#0a0f1e;color:#f1f5f9;font-family:'Inter',sans-serif;overflow-x:hidden}h1,h2{font-family:'Michroma',sans-serif;letter-spacing:.02em}h3,h4{font-family:'Exo 2',sans-serif;letter-spacing:.01em}.gradient-text{background:linear-gradient(135deg,#e8781f,#f59542,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.glass-card{background:rgba(17,24,39,.6);backdrop-filter:blur(12px);border:1px solid rgba(232,120,31,.15);transition:all .3s ease}.glass-card:hover{border-color:rgba(232,120,31,.4);transform:translateY(-4px);box-shadow:0 8px 32px rgba(232,120,31,.15)}.cta-btn{background:linear-gradient(135deg,#e8781f,#c95f10);transition:all .3s ease}.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,120,31,.4)}.cta-secondary{border:2px solid #e8781f;color:#e8781f;transition:all .3s ease}.cta-secondary:hover{background:#e8781f;color:#fff}.nav-blur{backdrop-filter:blur(16px);background:rgba(10,15,30,.85);border-bottom:1px solid rgba(232,120,31,.1)}.glow-line{height:2px;background:linear-gradient(90deg,transparent,#e8781f,transparent);opacity:.5}.reveal{opacity:0;transform:translateY(40px)}.bg-grid{background-image:linear-gradient(rgba(232,120,31,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(232,120,31,.02) 1px,transparent 1px);background-size:60px 60px}.orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}.float-call{position:fixed;bottom:24px;right:24px;z-index:50;width:60px;height:60px;background:linear-gradient(135deg,#e8781f,#c95f10);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(232,120,31,.5);animation:pulse-ring 2s ease infinite}@keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(232,120,31,.5)}70%{box-shadow:0 0 0 15px rgba(232,120,31,0)}100%{box-shadow:0 0 0 0 rgba(232,120,31,0)}}details summary{cursor:pointer;list-style:none}details summary::-webkit-details-marker{display:none}details[open] summary .faq-arrow{transform:rotate(180deg)}.faq-arrow{transition:transform .3s ease}
+      /* ---- SVG MOUNTAIN PARALLAX HERO ---- */
+    .mountain-bg { position:absolute; bottom:0; left:0; right:0; width:100%; pointer-events:none; }
+    .mountain-layer-1 { z-index:1; }
+    .mountain-layer-2 { z-index:2; }
+    .mountain-layer-3 { z-index:3; }
+    .tree-sway { transform-origin:bottom center; animation:treeSway 4s ease-in-out infinite alternate; }
+    .tree-sway-slow { transform-origin:bottom center; animation:treeSway 6s ease-in-out infinite alternate; animation-delay:-2s; }
+    @keyframes treeSway { 0%{transform:rotate(-0.7deg)} 100%{transform:rotate(0.7deg)} }
+    .card-glare { position:absolute; top:0; left:0; width:100%; height:100%; border-radius:inherit; pointer-events:none; background:radial-gradient(circle at 50% 50%,rgba(255,255,255,0.06),transparent 60%); opacity:0; transition:opacity .3s ease; z-index:5; }
+    .glass-card:hover .card-glare { opacity:1; }
+    .glass-card { transform-style:preserve-3d; perspective:1000px; }
+    /* 3D Logo showcase section — full viewport, centered */
+    #logo-showcase { position:relative; width:100%; height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#0a0f1e; overflow:hidden; }
+    #logo3d-canvas { position:absolute; top:0; left:0; width:100%; height:100%; }
+    #logo-showcase .showcase-label { position:absolute; bottom:5vh; left:50%; transform:translateX(-50%); z-index:10; text-align:center; pointer-events:none; }
+    /* Kill the pin spacer gap color */
+    .pin-spacer { background:#0a0f1e !important; }
+    @media (max-width:768px) { .mountain-bg{display:none!important} .reveal{opacity:1!important;transform:none!important} }
+    @media (prefers-reduced-motion:reduce) { .tree-sway,.tree-sway-slow{animation:none!important} .reveal{opacity:1!important;transform:none!important} }
+  </style>
+</head>
+<body class="bg-grid">
+
+  <nav class="fixed top-0 left-0 right-0 z-50 nav-blur"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex items-center justify-between h-16 lg:h-20"><a href="/osprey/" class="flex items-center"><img src="../osprey-logo.webp" alt="Osprey Solutions" class="h-10 lg:h-12 w-auto"></a><div class="hidden lg:flex items-center gap-8"><a href="/osprey/#services" class="text-muted hover:text-white transition-colors text-sm font-medium">Services</a><a href="/osprey/#industries" class="text-muted hover:text-white transition-colors text-sm font-medium">Industries</a><a href="tel:+17789100756" class="text-white font-semibold flex items-center gap-2"><svg class="w-4 h-4 text-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(778) 910-0756</a><a href="https://calendar.osprey.solutions" target="_blank" class="cta-btn text-navy-900 font-semibold px-6 py-2.5 rounded-lg text-sm">Book Free Strategy Call</a></div><a href="tel:+17789100756" class="lg:hidden text-cta font-bold">(778) 910-0756</a></div></div></nav>
+
+  <!-- HERO -->
+  <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden" style="background:linear-gradient(180deg,#0a0f1e 0%,#0f1525 40%,#1a1520 65%,#2a1a12 85%,#3d2210 100%)">
+    <!-- Mountain silhouettes (desktop) -->
+    <div class="mountain-bg mountain-layer-1" style="bottom:8%;z-index:1;"><svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,200 L0,130 L80,110 L160,80 L220,100 L300,50 L380,75 L440,40 L520,70 L580,35 L660,60 L720,30 L800,55 L860,25 L940,50 L1000,35 L1080,65 L1140,30 L1220,55 L1300,40 L1380,70 L1440,45 L1440,200Z" fill="#0c1220"/></svg></div>
+    <div class="mountain-bg mountain-layer-2" style="bottom:3%;z-index:2;"><svg viewBox="0 0 1440 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,160 L0,100 L100,80 L180,55 L260,75 L340,40 L420,65 L500,45 L580,70 L660,50 L720,75 L800,55 L880,40 L960,60 L1040,35 L1120,55 L1200,45 L1280,65 L1360,50 L1440,70 L1440,160Z" fill="#111a28"/></svg></div>
+    <div class="mountain-bg mountain-layer-3" style="bottom:0;z-index:3;"><svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,100 L0,70 L60,60 L120,50 L200,65 L280,55 L360,45 L440,60 L520,50 L600,60 L680,70 L760,60 L840,50 L920,55 L1000,45 L1080,55 L1160,50 L1240,60 L1320,55 L1440,65 L1440,100Z" fill="#0d1520"/><g class="tree-sway"><polygon points="60,52 68,20 76,52" fill="#0c1620"/></g><g class="tree-sway-slow"><polygon points="160,48 170,12 180,48" fill="#0b1520"/></g><g class="tree-sway"><polygon points="320,50 328,18 336,50" fill="#0c1620"/></g><g class="tree-sway-slow"><polygon points="1100,48 1110,15 1120,48" fill="#0c1620"/></g><g class="tree-sway"><polygon points="1300,50 1308,20 1316,50" fill="#0b1520"/></g></svg></div>
+    <div class="hidden lg:block absolute bottom-0 left-0 right-0 h-32 z-[2]" style="background:radial-gradient(ellipse 80% 100% at 50% 100%,rgba(232,120,31,0.1) 0%,transparent 70%)"></div>
+    <div class="orb w-96 h-96 bg-cyan-500 top-10 -left-48 opacity-[0.08]"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <div class="flex items-center gap-2 mb-4">
+          <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span class="text-accent font-subheading font-semibold text-sm tracking-wider uppercase">Website Design & Development</span>
+        </div>
+        <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+          Websites That Generate <span class="gradient-text">Calls, Not Just Clicks</span>
+        </h1>
+        <p class="text-muted text-lg mb-8 max-w-2xl">
+          Custom-built, conversion-focused websites with scroll animations, dark themes, and every SEO element baked in. No templates. No WordPress themes. Built from scratch to make your phone ring.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+          <a href="https://calendar.osprey.solutions" target="_blank" class="cta-btn text-navy-900 font-bold px-8 py-4 rounded-xl text-lg text-center">See Our Work →</a>
+          <a href="tel:+17789100756" class="cta-secondary px-8 py-4 rounded-xl text-lg font-semibold text-center">(778) 910-0756</a>
+        </div>
+        <div class="flex flex-wrap gap-6 text-sm text-muted">
+          <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>PageSpeed 90+ guaranteed</span>
+          <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Mobile-first design</span>
+          <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>SEO built in</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 3D LOGO SHOWCASE — Explode & Reassemble -->
+  <!-- ============================================ -->
+  <div id="logo-showcase">
+    <canvas id="logo3d-canvas"></canvas>
+    <div class="showcase-label">
+      <p class="font-heading text-sm tracking-widest text-accent uppercase">See the Magic</p>
+    </div>
+  </div>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- PROBLEM -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6">Your Website Is Either <span class="gradient-text">Making Money or Losing It</span></h2>
+      <p class="reveal text-muted text-lg text-center max-w-2xl mx-auto mb-16">A bad website doesn't just look bad. It actively repels customers and tells Google you're not worth ranking.</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/10 flex items-center justify-center mb-4"><svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <h3 class="font-bold text-lg mb-2">Slow = Invisible</h3>
+          <p class="text-muted">Every 1-second delay in load time costs you 7% in conversions. Most template sites score under 50 on PageSpeed mobile.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500/20 to-amber-600/10 flex items-center justify-center mb-4"><svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg></div>
+          <h3 class="font-bold text-lg mb-2">Not Mobile-First</h3>
+          <p class="text-muted">60%+ of your visitors are on phones. If they can't find your phone number in 2 seconds, they're gone.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-purple-600/10 flex items-center justify-center mb-4"><svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></div>
+          <h3 class="font-bold text-lg mb-2">No SEO Foundation</h3>
+          <p class="text-muted">No schema markup, no optimized titles, no internal linking, no blog. It's a digital brochure that Google can't read.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- WHY IT MATTERS -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="reveal font-heading text-2xl sm:text-3xl lg:text-4xl font-bold mb-8">Why Your Website Design <span class="gradient-text">Directly Costs You Revenue</span></h2>
+        <p class="reveal text-muted text-lg mb-6 leading-relaxed">Every <span class="gradient-text font-bold">1 second of load time</span> costs you 7% in conversions — that's Google's own research. A typical WordPress site built on a cheap theme scores 35-55 on PageSpeed Mobile. Ours score 90+. At the same traffic level, that speed difference alone can double the number of people who actually contact you. Not through better marketing. Just through a better-built site.</p>
+        <p class="reveal text-muted text-lg mb-6 leading-relaxed">First impressions happen in <span class="text-accent font-semibold">50 milliseconds</span>. Before your visitor reads a word, they've already decided whether to trust you. Research from Stanford Web Credibility shows <span class="text-accent font-semibold">75% of people judge a company's credibility based on its website design</span>. In competitive trades, the business with the better website wins — even if their prices are slightly higher. Your website is your #1 salesperson working 24/7.</p>
+        <p class="reveal text-muted text-lg leading-relaxed">Template websites carry hidden costs beyond poor performance. When every competitor uses the same Divi or Elementor themes, your site looks identical to theirs. Google's ranking algorithms increasingly reward websites with strong <span class="gradient-text font-bold">Core Web Vitals</span> scores — LCP, CLS, and INP — as direct ranking factors. Custom-built sites pass these tests. Template sites rarely do. You're fighting for the top of search results with a website that Google scores as below average.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- WHAT WE BUILD -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-4">What We <span class="gradient-text">Build</span></h2>
+      <p class="reveal text-muted text-center mb-16 max-w-2xl mx-auto">Three tiers depending on what your business needs.</p>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="text-accent font-subheading font-bold text-sm tracking-wider uppercase mb-4">Standard</div>
+          <h3 class="font-bold text-xl mb-2">Conversion-Focused Site</h3>
+          <p class="text-muted text-sm mb-4">Clean, fast, professional. Phone number everywhere, strong CTAs, reviews next to every call-to-action. Built to rank and convert.</p>
+          <div class="font-heading text-2xl font-bold gradient-text mb-4">$3-5K</div>
+          <ul class="space-y-2 text-sm text-muted">
+            <li class="flex items-center gap-2"><span class="text-accent">✦</span> Custom HTML/CSS/JS</li>
+            <li class="flex items-center gap-2"><span class="text-accent">✦</span> Mobile-first responsive</li>
+            <li class="flex items-center gap-2"><span class="text-accent">✦</span> SEO + Schema markup</li>
+            <li class="flex items-center gap-2"><span class="text-accent">✦</span> PageSpeed 90+</li>
+          </ul>
+        </div>
+        <div class="glass-card rounded-2xl p-8 reveal" style="border-color: rgba(232,120,31,0.3);">
+          <div class="text-accent font-subheading font-bold text-sm tracking-wider uppercase mb-4">Premium</div>
+          <h3 class="font-bold text-xl mb-2">Scroll Animation Site</h3>
+          <p class="text-muted text-sm mb-4">The "Apple" look. Smooth scroll-driven animations, GSAP transitions, cinematic product reveals. Makes your competitors' sites look like they were built in 2015.</p>
+          <div class="font-heading text-2xl font-bold gradient-text mb-4">$5-7K</div>
+          <ul class="space-y-2 text-sm text-muted">
+            <li class="flex items-center gap-2"><span class="text-accent">✦</span> Everything in Standard</li>
+            <li class="flex items-center gap-2"><span class="text-accent">✦</span> GSAP scroll animations</li>
+            <li class="flex items-center gap-2"><span class="text-accent">✦</span> AI-generated hero video</li>
+            <li class="flex items-center gap-2"><span class="text-accent">✦</span> Dark theme design</li>
+          </ul>
+        </div>
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="text-accent font-subheading font-bold text-sm tracking-wider uppercase mb-4">Elite</div>
+          <h3 class="font-bold text-xl mb-2">3D Interactive Site</h3>
+          <p class="text-muted text-sm mb-4">Full 3D hero with interactive elements — glass objects, particle effects, mouse parallax. The kind of site that makes people say "how did they do that?"</p>
+          <div class="font-heading text-2xl font-bold gradient-text mb-4">$7-10K</div>
+          <ul class="space-y-2 text-sm text-muted">
+            <li class="flex items-center gap-2"><span class="text-accent">✦</span> Everything in Premium</li>
+            <li class="flex items-center gap-2"><span class="text-accent">✦</span> React Three Fiber 3D</li>
+            <li class="flex items-center gap-2"><span class="text-accent">✦</span> Custom shaders</li>
+            <li class="flex items-center gap-2"><span class="text-accent">✦</span> Interactive hero experience</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center mt-12 reveal">
+        <a href="https://calendar.osprey.solutions" target="_blank" class="cta-btn inline-block text-navy-900 font-bold px-10 py-4 rounded-xl text-lg">Get a Free Website Mockup →</a>
+        <p class="text-muted text-sm mt-3">We'll build a working preview of your site before you commit — free.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- WHAT MAKES US DIFFERENT -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-4">Custom Build vs. <span class="gradient-text">Template Sites</span></h2>
+      <p class="reveal text-muted text-center mb-16 max-w-2xl mx-auto">There's a meaningful difference between "we made a website" and "we built you a lead generation machine."</p>
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <h3 class="font-bold text-lg mb-6 text-muted">Template / WordPress Agencies</h3>
+          <ul class="space-y-4 text-muted text-sm">
+            <li class="flex items-start gap-3"><span class="text-red-400 mt-0.5 flex-shrink-0">✗</span> Reskin a $59 theme — your site looks like 10,000 others</li>
+            <li class="flex items-start gap-3"><span class="text-red-400 mt-0.5 flex-shrink-0">✗</span> PageSpeed 30-50 on mobile — slow, bloated plugin stacks</li>
+            <li class="flex items-start gap-3"><span class="text-red-400 mt-0.5 flex-shrink-0">✗</span> SEO is an add-on, not built in from the start</li>
+            <li class="flex items-start gap-3"><span class="text-red-400 mt-0.5 flex-shrink-0">✗</span> You're locked into WordPress — updates break things regularly</li>
+            <li class="flex items-start gap-3"><span class="text-red-400 mt-0.5 flex-shrink-0">✗</span> No conversion strategy — pretty design but phone doesn't ring</li>
+          </ul>
+        </div>
+        <div class="glass-card rounded-2xl p-8 reveal" style="border-color: rgba(232,120,31,0.35);">
+          <h3 class="font-bold text-lg mb-6 gradient-text">Osprey Solutions</h3>
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-start gap-3"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span> 100% custom — unique design built from scratch for your business</li>
+            <li class="flex items-start gap-3"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span> PageSpeed 90+ guaranteed — optimized HTML, WebP images, deferred JS</li>
+            <li class="flex items-start gap-3"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span> Schema.org, local SEO, and Core Web Vitals built in from day one</li>
+            <li class="flex items-start gap-3"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span> Lightweight, fast stack — Tailwind CSS + GSAP, no plugin bloat</li>
+            <li class="flex items-start gap-3"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span> Built on conversion psychology — CTAs, trust signals, phone everywhere</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- EVERY SITE INCLUDES -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-16">Every Site <span class="gradient-text">Includes</span></h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold mb-2 flex items-center gap-2"><span class="text-accent">✦</span> Click-to-Call Everywhere</h3><p class="text-muted text-sm">Phone number in the nav, hero, floating button, and footer. One tap to call on mobile.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold mb-2 flex items-center gap-2"><span class="text-accent">✦</span> Schema.org JSON-LD</h3><p class="text-muted text-sm">Local business, service, FAQ, and review schema on every page. AI search engines and Google both read this.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold mb-2 flex items-center gap-2"><span class="text-accent">✦</span> Conversion-Optimized CTAs</h3><p class="text-muted text-sm">CTA after every section, de-risk badges, testimonials next to buttons. Built on the CLOSER framework.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold mb-2 flex items-center gap-2"><span class="text-accent">✦</span> Core Web Vitals Passed</h3><p class="text-muted text-sm">LCP under 2.5s, CLS under 0.1, INP under 200ms. WebP images, deferred JS, inline critical CSS.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold mb-2 flex items-center gap-2"><span class="text-accent">✦</span> Hosting Setup</h3><p class="text-muted text-sm">We deploy to our Hetzner server or your preferred host. SSL, CDN, and DNS configured.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold mb-2 flex items-center gap-2"><span class="text-accent">✦</span> Blog-Ready</h3><p class="text-muted text-sm">Built with a blog structure ready for SEO content. We can write the articles too (see our SEO Content Engine).</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="reveal font-heading text-2xl sm:text-3xl font-bold text-center mb-4">Who We Build <span class="gradient-text">Websites For</span></h2>
+        <p class="reveal text-muted text-center mb-12">We specialize in conversion-focused websites for businesses where a phone call or form fill is worth real money.</p>
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3"><span class="text-accent text-xl flex-shrink-0">✓</span><div><span class="font-bold">Local service businesses</span> — contractors, trades, HVAC, plumbing, roofing, landscaping. A professional website that ranks and converts is the single highest-ROI marketing investment you can make.</div></li>
+            <li class="flex items-start gap-3"><span class="text-accent text-xl flex-shrink-0">✓</span><div><span class="font-bold">Businesses with an embarrassing website</span> — if you're hesitant to send people to your current site, it's time. We'll have a demo live within 48 hours so you can see the difference immediately.</div></li>
+            <li class="flex items-start gap-3"><span class="text-accent text-xl flex-shrink-0">✓</span><div><span class="font-bold">New businesses</span> — don't launch with a $15/month template. First impressions are permanent. Start with a site that positions you as a premium operator from day one.</div></li>
+            <li class="flex items-start gap-3"><span class="text-accent text-xl flex-shrink-0">✓</span><div><span class="font-bold">Premium service providers</span> — high-end renovations, specialized consulting, luxury services. Your website needs to match the quality of your work and attract clients who value it.</div></li>
+            <li class="flex items-start gap-3"><span class="text-accent text-xl flex-shrink-0">✓</span><div><span class="font-bold">Businesses running paid ads</span> — sending Google Ads traffic to a slow, unclear website is like pouring water into a leaky bucket. A proper landing page can double conversion rates instantly.</div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- FAQ -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl font-bold text-center mb-12">Frequently Asked <span class="gradient-text">Questions</span></h2>
+      <div class="space-y-4">
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">How much does a custom website cost?</h3><p class="text-muted leading-relaxed">Standard sites are $3,000-5,000. Premium scroll animation sites are $5,000-7,000. Elite 3D interactive sites are $7,000-10,000. All include SEO, mobile optimization, and hosting setup.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">How long does it take?</h3><p class="text-muted leading-relaxed">Standard: 2-4 weeks. Premium: 3-5 weeks. Elite: 4-6 weeks. We can have a working demo live in 24-48 hours for review.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">Do you use templates?</h3><p class="text-muted leading-relaxed">No. Every site is custom built from scratch. We don't reskin WordPress themes. Your site will be unique, fast, and built specifically for your business and market.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">Will my website work on mobile?</h3><p class="text-muted leading-relaxed">Every site is built mobile-first. Floating call buttons, touch-friendly navigation, fast load times, and responsive layouts are standard on every build.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">Do you include SEO?</h3><p class="text-muted leading-relaxed">Yes. Schema.org markup, optimized titles, clean URLs, internal linking, image optimization, XML sitemap, and local SEO setup. We don't build websites that can't be found.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">What is a PageSpeed score and why does it matter for my business?</h3><p class="text-muted leading-relaxed">Google PageSpeed Insights scores your website 0-100 on loading performance, specifically on mobile. Scores below 50 hurt your search rankings and cause visitors to leave before your page loads. Every 1-second delay costs 7% in conversions. We guarantee 90+ on every build — most template sites score 30-55 on mobile.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">Do you build websites on WordPress?</h3><p class="text-muted leading-relaxed">No. We build custom HTML, CSS, and JavaScript sites using Tailwind CSS and GSAP animations. WordPress plugin bloat kills PageSpeed scores, security vulnerabilities require constant updates, and template themes look identical to competitors. Custom builds are faster, more secure, and completely unique.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">Can you redesign my existing website?</h3><p class="text-muted leading-relaxed">Yes. If your current site has good content, we can rebuild it with improved performance, conversion optimization, and updated design. We audit your existing site first, identify what's working, and build a better version that retains your SEO equity while dramatically improving speed, design, and conversion rate.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="py-20 lg:py-28 relative overflow-hidden">
+    <div class="orb w-96 h-96 bg-accent left-1/2 -translate-x-1/2 top-0 opacity-[0.06]"></div>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">Ready for a Website That <span class="gradient-text">Actually Works?</span></h2>
+      <p class="reveal text-muted text-lg mb-8">Book a call. We'll build a free mockup of your new site before you commit to anything.</p>
+      <div class="reveal"><a href="https://calendar.osprey.solutions" target="_blank" class="cta-btn inline-block text-navy-900 font-bold px-10 py-5 rounded-xl text-xl">Get Your Free Mockup →</a></div>
+      <div class="reveal flex flex-wrap justify-center gap-4 mt-6 text-sm text-muted">
+        <span class="flex items-center gap-1"><svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>No contracts</span>
+        <span class="flex items-center gap-1"><svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Free mockup</span>
+        <span class="flex items-center gap-1"><svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Custom built</span>
+        <span class="flex items-center gap-1"><svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>PageSpeed 90+</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-navy-700 py-12"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex flex-col md:flex-row items-center justify-between gap-6"><a href="/osprey/"><img src="../osprey-logo.webp" alt="Osprey Solutions" class="h-8 w-auto"></a><div class="flex flex-wrap gap-6 text-sm text-muted"><a href="/osprey/services/google-business-management.html" class="hover:text-white transition-colors">GBP</a><a href="/osprey/services/google-ads.html" class="hover:text-white transition-colors">Google Ads</a><a href="/osprey/services/ai-voice-agents.html" class="hover:text-white transition-colors">Voice AI</a><a href="/osprey/services/roofquote.html" class="hover:text-white transition-colors">RoofQuote</a><a href="/osprey/services/website-design.html" class="text-white">Websites</a><a href="/osprey/services/seo-content.html" class="hover:text-white transition-colors">SEO</a></div><p class="text-muted text-sm">&copy; 2026 Osprey Solutions</p></div></div></footer>
+  <a href="tel:+17789100756" class="float-call lg:hidden" aria-label="Call"><svg class="w-7 h-7 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></a>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Reveals
+    var ro = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ gsap.to(e.target,{opacity:1,y:0,scale:1,duration:.7,ease:'power2.out'}); ro.unobserve(e.target); }});
+    },{threshold:.05,rootMargin:'0px 0px 50px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ ro.observe(el); });
+
+    // Mountain parallax
+    (function(){
+      var layers=document.querySelectorAll('.mountain-bg');
+      if(!layers.length) return;
+      var speeds=[0.1,0.2,0.35];
+      window.addEventListener('scroll',function(){
+        var s=window.pageYOffset;
+        layers.forEach(function(l,i){ l.style.transform='translateY('+(s*(speeds[i]||0.1))+'px)'; });
+      },{passive:true});
+    })();
+
+    // Card tilt (desktop)
+    if(window.innerWidth>768){
+      document.querySelectorAll('.glass-card').forEach(function(c){
+        c.addEventListener('mousemove',function(e){
+          var r=c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;
+          c.style.transform='perspective(1000px) rotateX('+((y/r.height-.5)*-10)+'deg) rotateY('+((x/r.width-.5)*10)+'deg) scale(1.02)';
+        });
+        c.addEventListener('mouseleave',function(){ c.style.transform='perspective(1000px) rotateX(0) rotateY(0) scale(1)'; });
+      });
+    }
+
+    // ============================================
+    // 3D OSPREY LOGO — FULL SECTION, SCROLL-PINNED
+    // Logo assembled → explodes → reassembles in one viewport
+    // Works on mobile + desktop
+    // ============================================
+    (function(){
+      var canvas = document.getElementById('logo3d-canvas');
+      var container = document.getElementById('logo-showcase');
+      if (!canvas || !container) return;
+
+      var scene = new THREE.Scene();
+      var w = canvas.clientWidth || container.clientWidth;
+      var h = canvas.clientHeight || container.clientHeight;
+      var camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 100);
+      var renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+      renderer.setSize(w, h);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setClearColor(0x0a0f1e);
+      camera.position.set(0, 0, isMobile ? 5.0 : 5.5);
+
+      var img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.src = '/osprey/assets/osprey-logo-3d.webp';
+
+      var particles, origPos, explodedPos;
+      var progress = 0; // 0=assembled, 1=exploded
+      var targetProgress = 0;
+      var mouseX = 0, mouseY = 0;
+      var rotY = 0;
+      var isMobile = window.innerWidth < 768;
+
+      img.onload = function() {
+        var sCanvas = document.createElement('canvas');
+        var sz = isMobile ? 1400 : 2048; // MAXED — pushing the limits
+        sCanvas.width = sz; sCanvas.height = sz;
+        var ctx = sCanvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, sz, sz);
+        var data = ctx.getImageData(0, 0, sz, sz).data;
+
+        var positions = [], cols = [];
+        var step = 1; // Every single pixel on both
+        var spread = isMobile ? 3.8 : 4.5;
+
+        for (var y = 0; y < sz; y += step) {
+          for (var x = 0; x < sz; x += step) {
+            var i = (y * sz + x) * 4;
+            var r = data[i], g = data[i+1], b = data[i+2], a = data[i+3];
+            if (r + g + b < 15 || a < 80) continue; // Keep more edge detail
+            positions.push(
+              (x / sz - 0.5) * spread,
+              -(y / sz - 0.5) * spread,
+              (Math.random() - 0.5) * 0.2
+            );
+            cols.push(r/255, g/255, b/255);
+          }
+        }
+
+        var count = positions.length / 3;
+        var posArr = new Float32Array(positions);
+        var colArr = new Float32Array(cols);
+        origPos = new Float32Array(posArr);
+
+        // Exploded positions: scattered outward in a sphere
+        explodedPos = new Float32Array(count * 3);
+        for (var j = 0; j < count; j++) {
+          var th = Math.random() * Math.PI * 2;
+          var ph = Math.acos(2 * Math.random() - 1);
+          var rad = 2.5 + Math.random() * 4;
+          explodedPos[j*3]   = rad * Math.sin(ph) * Math.cos(th);
+          explodedPos[j*3+1] = rad * Math.sin(ph) * Math.sin(th);
+          explodedPos[j*3+2] = rad * Math.cos(ph);
+        }
+
+        var geo = new THREE.BufferGeometry();
+        geo.setAttribute('position', new THREE.BufferAttribute(posArr, 3));
+        geo.setAttribute('color', new THREE.BufferAttribute(colArr, 3));
+
+        var pSize = isMobile ? 0.35 : 0.25; // Insane density — individual pixels invisible
+        var mat = new THREE.PointsMaterial({
+          size: pSize,
+          vertexColors: true,
+          transparent: true,
+          opacity: 1.0,
+          sizeAttenuation: false
+        });
+
+        particles = new THREE.Points(geo, mat);
+        scene.add(particles);
+
+        // Scroll-driven: pin the section and drive explosion 0→1→0
+        // Progress: 0-0.4 = assembled (logo visible, spinning)
+        //           0.4-0.6 = exploding outward
+        //           0.6-0.8 = fully scattered
+        //           0.8-1.0 = reassembling back
+        gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.create({
+          trigger: container,
+          start: 'top top',
+          end: '+=80%', // Tight — just enough scroll for the full animation
+          pin: true,
+          pinSpacing: true,
+          scrub: 0.6,
+          onUpdate: function(self) {
+            var p = self.progress;
+            if (p < 0.35) {
+              targetProgress = 0; // assembled
+            } else if (p < 0.65) {
+              targetProgress = (p - 0.35) / 0.3; // exploding 0→1
+            } else if (p < 0.75) {
+              targetProgress = 1; // fully exploded
+            } else {
+              targetProgress = 1 - (p - 0.75) / 0.25; // reassembling 1→0
+            }
+          }
+        });
+
+        animate();
+      };
+
+      // Mouse (desktop only)
+      if (!isMobile) {
+        window.addEventListener('mousemove', function(e) {
+          mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+          mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
+        });
+      }
+
+      // Resize
+      window.addEventListener('resize', function() {
+        var nw = container.clientWidth, nh = container.clientHeight;
+        camera.aspect = nw / nh;
+        camera.updateProjectionMatrix();
+        renderer.setSize(nw, nh);
+      });
+
+      function animate() {
+        requestAnimationFrame(animate);
+        if (!particles) return;
+
+        // Smooth interpolation toward target
+        progress += (targetProgress - progress) * 0.08;
+
+        var pos = particles.geometry.attributes.position.array;
+        for (var i = 0; i < pos.length; i++) {
+          pos[i] = origPos[i] + (explodedPos[i] - origPos[i]) * progress;
+        }
+        particles.geometry.attributes.position.needsUpdate = true;
+
+        // Slow rotation
+        rotY += 0.004;
+        particles.rotation.y = rotY + mouseX * 0.2;
+        particles.rotation.x = Math.sin(Date.now() * 0.0003) * 0.08 + mouseY * 0.1;
+
+        // Adjust particle size/opacity during explosion
+        var baseSize = isMobile ? 0.35 : 0.25;
+        particles.material.size = baseSize + progress * 0.6;
+        particles.material.opacity = 1.0 - progress * 0.35;
+
+        renderer.render(scene, camera);
+      }
+    })();
+  </script>
+</body>
+</html>

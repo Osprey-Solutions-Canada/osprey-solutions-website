@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Voice Agents — Never Miss a Call Again | Osprey Solutions</title>
+  <meta name="description" content="AI voice agents that answer your phone 24/7, book appointments, qualify leads, and send everything to your CRM. 6 phone lines live. Sounds like a real person.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://osprey.solutions/services/ai-voice-agents">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Exo+2:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{navy:{900:'#0a0f1e',800:'#111827',700:'#1a2332',600:'#243044'},accent:{DEFAULT:'#e8781f',light:'#f59542',dark:'#c95f10'},cta:{DEFAULT:'#e8781f',hover:'#c95f10'},muted:'#94a3b8'},fontFamily:{heading:['Michroma','sans-serif'],subheading:['"Exo 2"','sans-serif'],body:['Inter','sans-serif']}}}}</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"AI Voice Agents","provider":{"@type":"ProfessionalService","name":"Osprey Solutions","url":"https://osprey.solutions","telephone":"+17789100756"},"description":"AI-powered phone agents that answer calls 24/7, book appointments, qualify leads, and integrate with your CRM. Never miss a customer call again.","areaServed":"North America","serviceType":"AI Automation"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How does the AI voice agent work?","acceptedAnswer":{"@type":"Answer","text":"When a customer calls your business number, the AI answers in a natural voice trained on your services, pricing, and FAQ. It can answer questions, book appointments, qualify leads, and send all information to your CRM automatically. It sounds like a real receptionist — not a robot."}},
+    {"@type":"Question","name":"Does the AI voice agent sound robotic?","acceptedAnswer":{"@type":"Answer","text":"No. Our AI uses Google's Gemini Live voice model, which sounds natural and conversational. Most callers don't realize they're talking to an AI. It handles interruptions, follow-up questions, and natural conversation flow."}},
+    {"@type":"Question","name":"Can the AI book appointments on my calendar?","acceptedAnswer":{"@type":"Answer","text":"Yes. The AI connects to Google Calendar and offers real available time slots. When the caller confirms, the appointment is booked immediately and both parties get a confirmation."}},
+    {"@type":"Question","name":"How much does an AI voice agent cost?","acceptedAnswer":{"@type":"Answer","text":"AI voice agent setup starts at $500 with a monthly management fee. This includes a dedicated phone number, custom training on your business, CRM integration, and ongoing optimization. It typically pays for itself by capturing calls you'd otherwise miss."}},
+    {"@type":"Question","name":"What CRM systems does it integrate with?","acceptedAnswer":{"@type":"Answer","text":"We integrate with GoHighLevel (GHL), Jobber, and custom CRM solutions. After every call, the AI extracts the caller's name, phone number, service interest, and callback preferences — then creates a contact in your CRM automatically."}},
+    {"@type":"Question","name":"Can an AI voice agent handle multiple calls at the same time?","acceptedAnswer":{"@type":"Answer","text":"Yes. Unlike a human receptionist who can only handle one call at a time, your AI voice agent handles unlimited simultaneous calls. During busy periods — morning rushes, after storm events, right after an ad goes live — every caller gets answered immediately with no hold times."}},
+    {"@type":"Question","name":"Will callers know they're talking to an AI?","acceptedAnswer":{"@type":"Answer","text":"Most callers don't realize they're speaking with an AI. We use Google Gemini Live, which uses natural speech patterns, handles interruptions, and speaks conversationally. We also ensure legal compliance — in jurisdictions that require disclosure, the AI can introduce itself appropriately while still qualifying leads and booking appointments effectively."}},
+    {"@type":"Question","name":"Can the AI voice agent transfer calls to a real person?","acceptedAnswer":{"@type":"Answer","text":"Yes. If a caller requests to speak with a human, or if the AI determines the conversation requires personal attention, it can warm-transfer the call to your phone. You can also set rules — for example, always transfer calls about large commercial jobs or upset customers directly to you."}}
+  ]}</script>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}body{background:#0a0f1e;color:#f1f5f9;font-family:'Inter',sans-serif;overflow-x:hidden}h1,h2{font-family:'Michroma',sans-serif;letter-spacing:.02em}h3,h4{font-family:'Exo 2',sans-serif;letter-spacing:.01em}.gradient-text{background:linear-gradient(135deg,#e8781f,#f59542,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.glass-card{background:rgba(17,24,39,.6);backdrop-filter:blur(12px);border:1px solid rgba(232,120,31,.15);transition:all .3s ease}.glass-card:hover{border-color:rgba(232,120,31,.4);transform:translateY(-4px);box-shadow:0 8px 32px rgba(232,120,31,.15)}.cta-btn{background:linear-gradient(135deg,#e8781f,#c95f10);transition:all .3s ease}.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,120,31,.4)}.cta-secondary{border:2px solid #e8781f;color:#e8781f;transition:all .3s ease}.cta-secondary:hover{background:#e8781f;color:#fff}.nav-blur{backdrop-filter:blur(16px);background:rgba(10,15,30,.85);border-bottom:1px solid rgba(232,120,31,.1)}.glow-line{height:2px;background:linear-gradient(90deg,transparent,#e8781f,transparent);opacity:.5}.reveal{opacity:0;transform:translateY(40px)}.bg-grid{background-image:linear-gradient(rgba(232,120,31,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(232,120,31,.02) 1px,transparent 1px);background-size:60px 60px}.orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}.float-call{position:fixed;bottom:24px;right:24px;z-index:50;width:60px;height:60px;background:linear-gradient(135deg,#e8781f,#c95f10);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(232,120,31,.5);animation:pulse-ring 2s ease infinite}@keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(232,120,31,.5)}70%{box-shadow:0 0 0 15px rgba(232,120,31,0)}100%{box-shadow:0 0 0 0 rgba(232,120,31,0)}}details summary{cursor:pointer;list-style:none}details summary::-webkit-details-marker{display:none}details[open] summary .faq-arrow{transform:rotate(180deg)}.faq-arrow{transition:transform .3s ease}
+      /* ---- SVG MOUNTAIN PARALLAX HERO ---- */
+    .mountain-bg { position:absolute; bottom:0; left:0; right:0; width:100%; pointer-events:none; }
+    .mountain-layer-1 { z-index:1; }
+    .mountain-layer-2 { z-index:2; }
+    .mountain-layer-3 { z-index:3; }
+    .tree-sway { transform-origin:bottom center; animation:treeSway 4s ease-in-out infinite alternate; }
+    .tree-sway-slow { transform-origin:bottom center; animation:treeSway 6s ease-in-out infinite alternate; animation-delay:-2s; }
+    @keyframes treeSway { 0%{transform:rotate(-0.7deg)} 100%{transform:rotate(0.7deg)} }
+    .card-glare { position:absolute; top:0; left:0; width:100%; height:100%; border-radius:inherit; pointer-events:none; background:radial-gradient(circle at 50% 50%,rgba(255,255,255,0.06),transparent 60%); opacity:0; transition:opacity .3s ease; z-index:5; }
+    .glass-card:hover .card-glare { opacity:1; }
+    .glass-card { transform-style:preserve-3d; perspective:1000px; }
+    @media (max-width:768px) { .mountain-bg{display:none!important} .reveal{opacity:1!important;transform:none!important}  }
+    @media (prefers-reduced-motion:reduce) { .tree-sway,.tree-sway-slow{animation:none!important} .reveal{opacity:1!important;transform:none!important} }
+  </style>
+</head>
+<body class="bg-grid">
+
+  <nav class="fixed top-0 left-0 right-0 z-50 nav-blur"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex items-center justify-between h-16 lg:h-20"><a href="/osprey/" class="flex items-center"><img src="../osprey-logo.webp" alt="Osprey Solutions" class="h-10 lg:h-12 w-auto"></a><div class="hidden lg:flex items-center gap-8"><a href="/osprey/#services" class="text-muted hover:text-white transition-colors text-sm font-medium">Services</a><a href="/osprey/#industries" class="text-muted hover:text-white transition-colors text-sm font-medium">Industries</a><a href="/osprey/#results" class="text-muted hover:text-white transition-colors text-sm font-medium">Results</a><a href="tel:+17789100756" class="text-white font-semibold flex items-center gap-2"><svg class="w-4 h-4 text-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(778) 910-0756</a><a href="https://calendar.osprey.solutions" target="_blank" class="cta-btn text-navy-900 font-semibold px-6 py-2.5 rounded-lg text-sm">Book Free Strategy Call</a></div><a href="tel:+17789100756" class="lg:hidden text-cta font-bold">(778) 910-0756</a></div></div></nav>
+
+  <!-- HERO -->
+  <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden" style="background:linear-gradient(180deg,#0a0f1e 0%,#0f1525 40%,#1a1520 65%,#2a1a12 85%,#3d2210 100%)">
+    <!-- Mountain silhouettes (desktop) -->
+    <div class="mountain-bg mountain-layer-1" style="bottom:8%;z-index:1;"><svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,200 L0,130 L80,110 L160,80 L220,100 L300,50 L380,75 L440,40 L520,70 L580,35 L660,60 L720,30 L800,55 L860,25 L940,50 L1000,35 L1080,65 L1140,30 L1220,55 L1300,40 L1380,70 L1440,45 L1440,200Z" fill="#0c1220"/></svg></div>
+    <div class="mountain-bg mountain-layer-2" style="bottom:3%;z-index:2;"><svg viewBox="0 0 1440 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,160 L0,100 L100,80 L180,55 L260,75 L340,40 L420,65 L500,45 L580,70 L660,50 L720,75 L800,55 L880,40 L960,60 L1040,35 L1120,55 L1200,45 L1280,65 L1360,50 L1440,70 L1440,160Z" fill="#111a28"/></svg></div>
+    <div class="mountain-bg mountain-layer-3" style="bottom:0;z-index:3;"><svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,100 L0,70 L60,60 L120,50 L200,65 L280,55 L360,45 L440,60 L520,50 L600,60 L680,70 L760,60 L840,50 L920,55 L1000,45 L1080,55 L1160,50 L1240,60 L1320,55 L1440,65 L1440,100Z" fill="#0d1520"/><g class="tree-sway"><polygon points="60,52 68,20 76,52" fill="#0c1620"/></g><g class="tree-sway-slow"><polygon points="160,48 170,12 180,48" fill="#0b1520"/></g><g class="tree-sway"><polygon points="320,50 328,18 336,50" fill="#0c1620"/></g><g class="tree-sway-slow"><polygon points="1100,48 1110,15 1120,48" fill="#0c1620"/></g><g class="tree-sway"><polygon points="1300,50 1308,20 1316,50" fill="#0b1520"/></g></svg></div>
+    <div class="hidden lg:block absolute bottom-0 left-0 right-0 h-32 z-[2]" style="background:radial-gradient(ellipse 80% 100% at 50% 100%,rgba(232,120,31,0.1) 0%,transparent 70%)"></div>
+    <div class="orb w-96 h-96 bg-purple-600 top-10 -left-48 opacity-[0.08]"></div>
+    <!-- Waveform canvas behind hero text -->
+    <canvas id="waveform-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none;opacity:0.4;" class="lg:!left-auto lg:!right-0 lg:!w-1/2 lg:!opacity-60"></canvas>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl lg:max-w-xl">
+        <div class="flex items-center gap-2 mb-4">
+          <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+          <span class="text-accent font-subheading font-semibold text-sm tracking-wider uppercase">AI Voice Agents</span>
+        </div>
+        <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+          Never Miss a Call Again. <span class="gradient-text">Your AI Answers 24/7.</span>
+        </h1>
+        <p class="text-muted text-lg mb-8 max-w-2xl">
+          An AI receptionist that sounds like a real person — answers your phone, books appointments, qualifies leads, and sends everything to your CRM. While you're on a job, your phone is still working for you.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+          <a href="https://calendar.osprey.solutions" target="_blank" class="cta-btn text-navy-900 font-bold px-8 py-4 rounded-xl text-lg text-center">Hear It In Action →</a>
+          <a href="tel:+17789100756" class="cta-secondary px-8 py-4 rounded-xl text-lg font-semibold text-center">(778) 910-0756</a>
+        </div>
+        <div class="flex flex-wrap gap-6 text-sm text-muted">
+          <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>6 phone lines live</span>
+          <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Books real calendar slots</span>
+          <span class="flex items-center gap-2"><svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>CRM integration included</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- PROBLEM -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6">Every Missed Call Is a <span class="gradient-text">Lost Customer</span></h2>
+      <p class="reveal text-muted text-lg text-center max-w-2xl mx-auto mb-16">85% of people who can't reach you on the first call will never call back. They'll call your competitor instead.</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500/20 to-amber-600/10 flex items-center justify-center mb-4"><svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div>
+          <h3 class="font-bold text-lg mb-2">You're on the Job</h3>
+          <p class="text-muted">When you're on a roof, under a sink, or with a client — you can't answer. Every ring that goes to voicemail is revenue walking away.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500/20 to-indigo-600/10 flex items-center justify-center mb-4"><svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg></div>
+          <h3 class="font-bold text-lg mb-2">After-Hours Calls</h3>
+          <p class="text-muted">Emergencies don't wait for business hours. People with a leaking roof at 10pm call whoever answers first.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/10 flex items-center justify-center mb-4"><svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <h3 class="font-bold text-lg mb-2">Answering Services Are Expensive</h3>
+          <p class="text-muted">Traditional answering services charge $1-3 per minute, can't book appointments, and read from a generic script. Our AI costs less and does more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- WHY IT MATTERS -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="reveal font-heading text-2xl sm:text-3xl lg:text-4xl font-bold mb-8">The Revenue You're <span class="gradient-text">Losing to Voicemail</span></h2>
+        <p class="reveal text-muted text-lg mb-6 leading-relaxed"><span class="gradient-text font-bold">85% of people</span> who can't reach a business on the first call will never call back — they'll call a competitor instead. For a roofing contractor missing 5 calls per week, that's 20 missed opportunities per month. At a $4,000 average job value, that's potentially <span class="text-accent font-semibold">$80,000 in lost monthly revenue</span>. Not from bad marketing. Not from low traffic. Just from no one picking up the phone.</p>
+        <p class="reveal text-muted text-lg mb-6 leading-relaxed">Research by Harvard Business Review shows <span class="text-accent font-semibold">78% of customers buy from whoever responds first</span> — not the cheapest, not the most reviewed. The first responder wins. Traditional answering services charge <span class="text-accent font-semibold">$1-3 per minute</span>, can't book appointments, and read from a generic script that makes callers feel like they're getting the runaround. An AI voice agent costs a fraction of that and does more — every single call, at every hour.</p>
+        <p class="reveal text-muted text-lg leading-relaxed">For emergency trades — plumbing leaks, roof damage, HVAC failures — <span class="gradient-text font-bold">after-hours calls are your highest-value leads</span>. These customers are in pain, need immediate help, and will pay a premium for whoever answers right now. With an AI agent running 24/7, you capture those emergency jobs while your competitors' phones ring out into the night.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- WHAT IT DOES -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-4">What Your AI Agent <span class="gradient-text">Actually Does</span></h2>
+      <p class="reveal text-muted text-center mb-16 max-w-2xl mx-auto">Trained on your business, your services, your pricing. Not a generic script.</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold mb-2 flex items-center gap-2"><span class="text-accent">✦</span> Answers Every Call</h3><p class="text-muted text-sm">24/7/365. Picks up on the first ring. Greets callers by your business name with a natural, friendly voice.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold mb-2 flex items-center gap-2"><span class="text-accent">✦</span> Books Appointments</h3><p class="text-muted text-sm">Connected to Google Calendar. Offers real available slots and books confirmed appointments on the spot.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold mb-2 flex items-center gap-2"><span class="text-accent">✦</span> Qualifies Leads</h3><p class="text-muted text-sm">Asks the right questions — service needed, location, timeline, budget. Filters out tire-kickers before they waste your time.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold mb-2 flex items-center gap-2"><span class="text-accent">✦</span> Knows Your Business</h3><p class="text-muted text-sm">Trained on your services, pricing, service areas, FAQs. Answers questions like "do you do metal roofs?" with accurate info.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold mb-2 flex items-center gap-2"><span class="text-accent">✦</span> CRM Integration</h3><p class="text-muted text-sm">Every call creates a contact in GoHighLevel or Jobber — name, phone, service interest, callback preference. Automated.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold mb-2 flex items-center gap-2"><span class="text-accent">✦</span> SMS + Email Notifications</h3><p class="text-muted text-sm">Get a text and email after every call with a summary — who called, what they need, and their callback number.</p></div>
+      </div>
+      <div class="text-center mt-12 reveal">
+        <a href="https://calendar.osprey.solutions" target="_blank" class="cta-btn inline-block text-navy-900 font-bold px-10 py-4 rounded-xl text-lg">Set Up Your AI Agent →</a>
+        <p class="text-muted text-sm mt-3">We build and train your AI agent in under 48 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- WHAT MAKES US DIFFERENT -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-4">AI Voice vs. <span class="gradient-text">Everything Else</span></h2>
+      <p class="reveal text-muted text-center mb-16 max-w-2xl mx-auto">There are other ways to handle missed calls. None of them work as well for service businesses.</p>
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <h3 class="font-bold text-lg mb-6 text-muted">Other Solutions</h3>
+          <ul class="space-y-4 text-muted text-sm">
+            <li class="flex items-start gap-3"><span class="text-red-400 mt-0.5 flex-shrink-0">✗</span> <strong class="text-slate-300">Voicemail:</strong> 85% of callers never leave one. They call your competitor.</li>
+            <li class="flex items-start gap-3"><span class="text-red-400 mt-0.5 flex-shrink-0">✗</span> <strong class="text-slate-300">Human answering service:</strong> $1-3/min, can't book appointments, sounds scripted</li>
+            <li class="flex items-start gap-3"><span class="text-red-400 mt-0.5 flex-shrink-0">✗</span> <strong class="text-slate-300">Basic phone bots:</strong> "Press 1 for roofing" — kills trust instantly</li>
+            <li class="flex items-start gap-3"><span class="text-red-400 mt-0.5 flex-shrink-0">✗</span> <strong class="text-slate-300">Hiring a receptionist:</strong> $40,000+/year salary, only works 8 hours a day</li>
+          </ul>
+        </div>
+        <div class="glass-card rounded-2xl p-8 reveal" style="border-color: rgba(232,120,31,0.35);">
+          <h3 class="font-bold text-lg mb-6 gradient-text">Osprey AI Voice Agent</h3>
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-start gap-3"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span> Answers every call on the first ring — 24/7, including holidays</li>
+            <li class="flex items-start gap-3"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span> Uses Google Gemini Live — sounds natural, handles interruptions naturally</li>
+            <li class="flex items-start gap-3"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span> Books confirmed appointments directly to Google Calendar</li>
+            <li class="flex items-start gap-3"><span class="text-green-400 mt-0.5 flex-shrink-0">✓</span> Creates contacts in GoHighLevel or Jobber automatically after every call</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- HOW IT WORKS -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-16">How It <span class="gradient-text">Works</span></h2>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="text-center reveal">
+          <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-accent-dark mx-auto mb-4 flex items-center justify-center"><span class="font-heading text-2xl font-bold">1</span></div>
+          <h3 class="font-bold mb-2">We Train It</h3>
+          <p class="text-muted text-sm">Send us your services, pricing, FAQs, and service areas. We build a custom AI agent trained on your business.</p>
+        </div>
+        <div class="text-center reveal">
+          <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-accent-dark mx-auto mb-4 flex items-center justify-center"><span class="font-heading text-2xl font-bold">2</span></div>
+          <h3 class="font-bold mb-2">Get a Number</h3>
+          <p class="text-muted text-sm">We assign a local phone number or forward your existing number. Callers never know the difference.</p>
+        </div>
+        <div class="text-center reveal">
+          <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-accent-dark mx-auto mb-4 flex items-center justify-center"><span class="font-heading text-2xl font-bold">3</span></div>
+          <h3 class="font-bold mb-2">It Answers</h3>
+          <p class="text-muted text-sm">Every call gets picked up. The AI talks naturally, answers questions, books appointments, and captures lead info.</p>
+        </div>
+        <div class="text-center reveal">
+          <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-accent to-accent-dark mx-auto mb-4 flex items-center justify-center"><span class="font-heading text-2xl font-bold">4</span></div>
+          <h3 class="font-bold mb-2">You Get Leads</h3>
+          <p class="text-muted text-sm">Contact created in your CRM, SMS + email notification sent to you, appointment on your calendar. Done.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- STATS -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center reveal">
+        <div><div class="font-heading text-4xl font-bold gradient-text">6</div><div class="text-muted text-sm mt-2">Phone Lines Live</div></div>
+        <div><div class="font-heading text-4xl font-bold gradient-text">24/7</div><div class="text-muted text-sm mt-2">Always Answering</div></div>
+        <div><div class="font-heading text-4xl font-bold gradient-text">85%</div><div class="text-muted text-sm mt-2">Won't Call Back</div></div>
+        <div><div class="font-heading text-4xl font-bold gradient-text">&lt;48h</div><div class="text-muted text-sm mt-2">Setup Time</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="reveal font-heading text-2xl sm:text-3xl font-bold text-center mb-4">Who Needs an <span class="gradient-text">AI Voice Agent</span></h2>
+        <p class="reveal text-muted text-center mb-12">If your business runs on phone calls, you need to answer every single one — or lose revenue to whoever does.</p>
+        <div class="glass-card rounded-2xl p-8 reveal">
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3"><span class="text-accent text-xl flex-shrink-0">✓</span><div><span class="font-bold">Solo contractors and small teams</span> — you're on a job site, can't answer. Your AI agent handles it, books the next job, and texts you a summary.</div></li>
+            <li class="flex items-start gap-3"><span class="text-accent text-xl flex-shrink-0">✓</span><div><span class="font-bold">Emergency trades</span> — plumbing, HVAC, roofing. After-hours emergency calls are your highest-margin jobs. You need to capture every single one.</div></li>
+            <li class="flex items-start gap-3"><span class="text-accent text-xl flex-shrink-0">✓</span><div><span class="font-bold">Businesses spending money on Google Ads</span> — you're paying $30-50+ per click. If half the calls those clicks generate go unanswered, your ad spend is being wasted.</div></li>
+            <li class="flex items-start gap-3"><span class="text-accent text-xl flex-shrink-0">✓</span><div><span class="font-bold">Service businesses using GoHighLevel or Jobber</span> — our AI agents integrate natively, pushing lead data directly into your existing CRM workflows.</div></li>
+            <li class="flex items-start gap-3"><span class="text-accent text-xl flex-shrink-0">✓</span><div><span class="font-bold">Multi-location service companies</span> — one centralized AI handles calls across all locations, routes by service area, and books into the right calendar.</div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line max-w-4xl mx-auto"></div>
+
+  <!-- FAQ -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl font-bold text-center mb-12">Frequently Asked <span class="gradient-text">Questions</span></h2>
+      <div class="space-y-4">
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">How does the AI voice agent work?</h3><p class="text-muted leading-relaxed">When a customer calls, the AI answers in a natural voice trained on your services, pricing, and FAQ. It answers questions, books appointments, qualifies leads, and sends everything to your CRM. Most callers don't realize they're talking to AI.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">Does it sound robotic?</h3><p class="text-muted leading-relaxed">No. We use Google's Gemini Live voice model, which sounds natural and conversational. It handles interruptions, follow-up questions, and natural conversation flow. The best way to judge is to call our demo line and hear for yourself.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">Can it book appointments on my calendar?</h3><p class="text-muted leading-relaxed">Yes. The AI connects to Google Calendar and offers real available slots. When the caller confirms, the appointment is booked instantly and both parties get a confirmation.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">How much does it cost?</h3><p class="text-muted leading-relaxed">Setup starts at $500 with a monthly management fee. Includes a dedicated phone number, custom training, CRM integration, and ongoing optimization. It typically pays for itself by capturing calls you'd otherwise miss.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">What CRM systems does it work with?</h3><p class="text-muted leading-relaxed">GoHighLevel (GHL), Jobber, and custom integrations. After every call, the AI extracts the caller's name, phone, service interest, and callback preference — then creates a contact in your CRM automatically.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">Can an AI voice agent handle multiple calls at the same time?</h3><p class="text-muted leading-relaxed">Yes. Unlike a human receptionist who can only handle one call at a time, your AI agent handles unlimited simultaneous calls. During busy periods — morning rushes, after storm events, right after an ad goes live — every caller gets answered immediately with no hold times or busy signals.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">Will callers know they're talking to an AI?</h3><p class="text-muted leading-relaxed">Most callers don't realize they're speaking with an AI. We use Google Gemini Live, which uses natural speech patterns and handles interruptions conversationally. In jurisdictions that require disclosure, the AI introduces itself appropriately — while still qualifying leads and booking appointments effectively.</p></div>
+        <div class="glass-card rounded-xl p-6 reveal"><h3 class="font-bold text-lg mb-3 text-white">Can the AI transfer calls to a real person?</h3><p class="text-muted leading-relaxed">Yes. If a caller requests a human or if the AI determines the conversation needs personal attention, it can warm-transfer the call to your phone. You can set rules — for example, always transfer calls about large commercial jobs directly to you while the AI handles routine residential inquiries.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="py-20 lg:py-28 relative overflow-hidden">
+    <div class="orb w-96 h-96 bg-accent left-1/2 -translate-x-1/2 top-0 opacity-[0.06]"></div>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="reveal font-heading text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">Stop Missing Calls. <span class="gradient-text">Start Capturing Revenue.</span></h2>
+      <p class="reveal text-muted text-lg mb-8">Book a demo and hear your custom AI agent in action. We'll build it in under 48 hours.</p>
+      <div class="reveal"><a href="https://calendar.osprey.solutions" target="_blank" class="cta-btn inline-block text-navy-900 font-bold px-10 py-5 rounded-xl text-xl">Book Your Demo →</a></div>
+      <div class="reveal flex flex-wrap justify-center gap-4 mt-6 text-sm text-muted">
+        <span class="flex items-center gap-1"><svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>48-hour setup</span>
+        <span class="flex items-center gap-1"><svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>No contracts</span>
+        <span class="flex items-center gap-1"><svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>CRM integration included</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-navy-700 py-12"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex flex-col md:flex-row items-center justify-between gap-6"><a href="/osprey/"><img src="../osprey-logo.webp" alt="Osprey Solutions" class="h-8 w-auto"></a><div class="flex flex-wrap gap-6 text-sm text-muted"><a href="/osprey/services/google-business-management.html" class="hover:text-white transition-colors">GBP</a><a href="/osprey/services/google-ads.html" class="hover:text-white transition-colors">Google Ads</a><a href="/osprey/services/ai-voice-agents.html" class="text-white">Voice AI</a><a href="/osprey/services/roofquote.html" class="hover:text-white transition-colors">RoofQuote</a><a href="/osprey/services/website-design.html" class="hover:text-white transition-colors">Websites</a><a href="/osprey/services/seo-content.html" class="hover:text-white transition-colors">SEO</a></div><p class="text-muted text-sm">&copy; 2026 Osprey Solutions</p></div></div></footer>
+  <a href="tel:+17789100756" class="float-call lg:hidden" aria-label="Call"><svg class="w-7 h-7 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></a>
+  <script>
+    // Reveals
+    var ro=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){gsap.to(e.target,{opacity:1,y:0,scale:1,duration:.7,ease:'power2.out'});ro.unobserve(e.target)}})},{threshold:.05,rootMargin:'0px 0px 50px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el)});
+
+    // Voice waveform animation
+    (function(){
+      var c=document.getElementById('waveform-canvas');
+      if(!c) return;
+      var ctx=c.getContext('2d');
+      function resize(){c.width=c.offsetWidth*2;c.height=c.offsetHeight*2;ctx.scale(2,2)}
+      resize(); window.addEventListener('resize',resize);
+
+      var bars=48;
+      var barData=[];
+      for(var i=0;i<bars;i++) barData.push({h:0,target:0,speed:0.03+Math.random()*0.04,phase:Math.random()*Math.PI*2});
+
+      function draw(){
+        requestAnimationFrame(draw);
+        var w=c.width/2, h=c.height/2;
+        ctx.clearRect(0,0,w,h);
+        var barW=w/bars*0.6;
+        var gap=w/bars;
+        var t=Date.now()*0.003;
+
+        for(var i=0;i<bars;i++){
+          var b=barData[i];
+          // Simulate speech-like waveform — mix of sine waves for organic feel
+          b.target=Math.abs(Math.sin(t*1.2+b.phase)*Math.sin(t*0.7+i*0.3)*Math.cos(t*0.4+i*0.15))*h*0.7;
+          // Random spikes like consonants
+          if(Math.random()<0.008) b.target=h*0.5+Math.random()*h*0.3;
+          b.h+=(b.target-b.h)*b.speed;
+
+          var x=i*gap+(gap-barW)/2;
+          var barH=Math.max(b.h,3);
+          var y=(h-barH)/2;
+
+          // Gradient bar — purple to orange
+          var grad=ctx.createLinearGradient(x,y,x,y+barH);
+          grad.addColorStop(0,'rgba(168,85,247,0.8)');
+          grad.addColorStop(0.5,'rgba(232,120,31,0.9)');
+          grad.addColorStop(1,'rgba(168,85,247,0.8)');
+          ctx.fillStyle=grad;
+          ctx.beginPath();
+          ctx.roundRect(x,y,barW,barH,barW/2);
+          ctx.fill();
+        }
+      }
+      draw();
+    })();
+  </script>
+</body>
+</html>
